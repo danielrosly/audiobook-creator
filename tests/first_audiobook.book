@@ -1,0 +1,23 @@
+@@01-Pierwszy_pierwszy.mp3@
+Temat: Metodyki zwinne. Scrum.
+@US Sprint. Sprint backlog. Product owner. Development team. Customers. Scrum master. Scrum meeting. Sprint review. Burndown Chart.@
+To samo po angielsku.
+@ENG Sprint. Sprint backlog. Product owner. Development team. Customers. Scrum master. Scrum meeting. Sprint review. Burndown Chart.@
+Koniec.
+
+@@02-Pierwszy_drugi.mp3@
+Temat: Format dokumentu.
+@ENG Document format.
+   Follow structure described in this file.
+   Monkey is reserved sign. Putting it in wrong place or wrong way causes program to stop with error.
+   Two seqential monkeys divide fragments of text used to generate separate MP3 files.
+   One monkey separates sections within data for one MP3 file.
+   First section after two monkeys describes name of MP3 file. It has to have number at start followed by hyphen and ended with dot mp3.
+   Name of song in ID3 tag is created from name of MP3 file defined in this section. I.e. this song will have name 'Pierwszy Drugi'. Number is also put in ID3 tag. Other tags are taken from yaml file that describes book.
+   Monkey ends this section and then starts block with text to read. Text block always starts with default language (configured in yaml file). So, in this place language cant be changed.
+   Text block always starts and returns to default language. But inside the text there can be MANY sections that use different non-default languages. They start with monkey and name of language (capital) and end with monkey alone returning to default language.
+   There has to be double monkey at the end of document.
+   New lines are not important - they are replaced by space during parsing.
+   @
+Koniec
+@@

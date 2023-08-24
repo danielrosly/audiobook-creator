@@ -1,0 +1,20 @@
+---
+# which reading engine to use: 'google translate' or 'aws polly'
+# first is free, but it generates worse quality
+reading_engine: 'google translate'
+# yaml config files for audiobooks to be created:
+audiobooks:
+  - "first.yaml"
+  - "second.yaml"
+# ====================================
+# ====================================
+# AWS region and credentials
+aws_region: "xxxxxxxxx"
+aws_access_key_id: '*************'
+aws_secret_access_key: '*********************************'
+# name of bucket used to generate larger mp3, asynchronously
+s3bucket: 'mp3-generation-bucket'
+# how often (in seconds) to check s3 bucket for generated files
+check_delay: "5"
+# maximum size of files generated in sync mode - currently no more than 3000 chars in AWS
+max_sync: "3000"

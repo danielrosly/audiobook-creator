@@ -1,0 +1,9 @@
+---
+BookFile: "e:\\Danek\\Dokumenty\\IT\\Python\\AudiobookReader\\tests\\second_audiobook.book"
+HashFile: "e:\\Danek\\Dokumenty\\IT\\Python\\AudiobookReader\\tests\\second_audiobook.hsh"
+ResultDir: "e:\\Danek\\Dokumenty\\IT\\Python\\AudiobookReader\\tests\\second"
+MainLanguage: "pl"
+Album: "Pierwszy"
+Artist: "Daniel Rosly"
+AlbumArtist: "Daniel Rosly"
+AlbumDate: "2021"

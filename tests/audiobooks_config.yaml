@@ -1,0 +1,8 @@
+---
+# which reading engine to use: 'google translate' or 'aws polly'
+# first is free, but worse
+reading_engine: 'google translate'
+# yaml config files for audiobooks to be created:
+audiobooks:
+  - "e:\\Danek\\Dropbox\\Git\\02_Ogolne\\audiobook.yaml"
+
