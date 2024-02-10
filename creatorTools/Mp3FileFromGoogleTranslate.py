@@ -113,18 +113,19 @@ class Mp3FileFromGoogleTranslate(Mp3File):
         final_text = []
         for toke in toke_list:
             tmp_tok = toke.strip()
-            while len(tmp_tok) > 100:
-                space_pos = toke.find(' ', 60)
-                if space_pos == -1:
-                    raise Mp3Exception('String \'{}\' is longer than 100 characters '
-                                       'and contains no dot, colon or space do divide it.'.format(tmp_tok), None)
-                if space_pos > 100:
-                    raise Mp3Exception('String \'{}\' is longer than 100 characters and contains '
-                                       'no space do divide it in first 100 characters.'.format(tmp_tok), None)
-                final_text.append(tmp_tok[:space_pos].strip())
-                tmp_tok = tmp_tok[space_pos:]
-            if tmp_tok.strip() != '':
-                final_text.append(tmp_tok)
+            if any(c.isalpha() for c in tmp_tok):   # token must contain at least one letter to read
+                while len(tmp_tok) > 100:
+                    space_pos = toke.find(' ', 60)
+                    if space_pos == -1:
+                        raise Mp3Exception('String \'{}\' is longer than 100 characters '
+                                           'and contains no dot, colon or space do divide it.'.format(tmp_tok), None)
+                    if space_pos > 100:
+                        raise Mp3Exception('String \'{}\' is longer than 100 characters and contains '
+                                           'no space do divide it in first 100 characters.'.format(tmp_tok), None)
+                    final_text.append(tmp_tok[:space_pos].strip())
+                    tmp_tok = tmp_tok[space_pos:]
+                if tmp_tok.strip() != '':
+                    final_text.append(tmp_tok)
         # processing all fragments of text
         frag_count = 1
         self.tran_text[fragment_id][2] = []
